@@ -8,11 +8,11 @@ export default function Home() {
       <Sidebar />
       <div className="container-fluid p-0">
         <About />
-        <hr class="m-0" />
+        <hr className="m-0" />
         <Education />
-        <hr class="m-0" />
+        <hr className="m-0" />
         <Skills />
-        <hr class="m-0" />
+        <hr className="m-0" />
       </div>
     </div>
   );
