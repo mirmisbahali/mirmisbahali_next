@@ -40,6 +40,11 @@ const Navbar = () => {
               Skills
             </a>
           </li>
+          <li className="nav-item">
+            <a className="nav-link js-scroll-trigger" href="#projects">
+              Projects
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
