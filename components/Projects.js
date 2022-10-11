@@ -6,8 +6,8 @@ const Projects = ({ props }) => {
         <h2 className="mb-5"></h2>
         <div className="row">
           <h2 className="mb-5"> Projects</h2>
-          {props.projects.map((i) => (
-          <div className="col">
+          {props.projects.map((i, index) => (
+          <div className="col" key={index}>
             <ProjectCard frontmatter={i.frontmatter} slug={i.slug}  />
           </div>
           ))}

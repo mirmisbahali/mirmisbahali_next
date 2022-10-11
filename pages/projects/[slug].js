@@ -4,6 +4,8 @@ import matter from "gray-matter";
 import { marked } from "marked";
 import Link from "next/link";
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 export default function ProjectsPage({
   frontmatter: { title, date, cover_image, tags },
@@ -12,10 +14,13 @@ export default function ProjectsPage({
 }) {
   return (
     <>
-      <div className="container mt-5">
-        <Link href="/">
-          <a>Back</a>
+<div className="container mt-5">
+<Link href="/">
+          <a className="btn btn-outline-secondary"><FontAwesomeIcon icon={faArrowLeft} /> Back</a>
         </Link>
+</div>
+      <div className="container mt-5">
+      
         <div className="row">
           <div className="col-lg-8">
             <article>
@@ -38,7 +43,8 @@ export default function ProjectsPage({
                 })}
               </header>
 
-              <Image src={cover_image} alt={title} width={1920} height={1080} />
+              <Image src={cover_image} alt={title} width="720" height="720" layout="responsive" objectFit="contain" />
+
               <section
                 className="mb-5"
                 dangerouslySetInnerHTML={{ __html: marked(content) }}
@@ -71,7 +77,6 @@ export async function getStaticProps({ params: { slug } }) {
     path.join("projects", slug + ".md"),
     "utf-8"
   );
-
   const { data: frontmatter, content } = matter(markdownWithMeta);
   return {
     props: {

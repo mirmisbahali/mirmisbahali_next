@@ -8,6 +8,7 @@ import Education from "../components/Education";
 import Skills from "../components/Skills";
 import ProjectCard from "../components/ProjectCard";
 import Projects from "../components/Projects";
+import {sortByDate} from '../utils'
 
 export default function Home(props) {
   return (
@@ -16,11 +17,11 @@ export default function Home(props) {
       <div className="container-fluid p-0">
         <About />
         <hr className="m-0" />
+        <Projects props={props} />
+        <hr className="m-0" />
         <Education />
         <hr className="m-0" />
         <Skills />
-        <hr className="m-0" />
-        <Projects props={props} />
         
       </div>
     </div>
@@ -30,12 +31,13 @@ export default function Home(props) {
 export async function getStaticProps() {
   // Get files from the projects dir
   const files = fs.readdirSync(path.join("projects"));
+  
 
   // Get slug and frontmatter from projects
   const projects = files.map((filename) => {
     // Create slug
     const slug = filename.replace(".md", "");
-
+    
     // Get frontmatter
     const markdownWithMeta = fs.readFileSync(
       path.join("projects", filename),
@@ -43,7 +45,6 @@ export async function getStaticProps() {
     );
 
     const { data: frontmatter } = matter(markdownWithMeta);
-    
 
     return {
       slug,
@@ -53,7 +54,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      projects: projects,
+      projects: projects.sort(sortByDate),
     },
   };
 }

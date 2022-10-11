@@ -10,7 +10,7 @@ const Education = () => {
             <h3 className="mb-0">Bachelor of Engineering</h3>
             <div className="subheading mb-3">Osmania University</div>
             <div>Mechanical Engineering</div>
-            <p>GPA: 7.81/10</p>
+            <p>GPA: 7.85/10</p>
           </div>
           <div className="flex-shrink-0">
             <span className="text-primary">2018 - 2022</span>
