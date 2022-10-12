@@ -26,9 +26,14 @@ const Navbar = () => {
       <div className="collapse navbar-collapse" id="navbarResponsive">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <a className="nav-link js-scroll-trigger" href="#about">
+            <a className="nav-link js-scroll-trigger" href="#page-top">
               About
             </a>
+          <li className="nav-item">
+            <a className="nav-link js-scroll-trigger" href="#projects">
+              Projects
+            </a>
+          </li>
           </li>
           <li className="nav-item">
             <a className="nav-link js-scroll-trigger" href="#education">
