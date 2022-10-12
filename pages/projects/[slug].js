@@ -46,7 +46,7 @@ export default function ProjectsPage({
               <Image src={cover_image} alt={title} width="720" height="720" layout="responsive" objectFit="contain" />
 
               <section
-                className="mb-5"
+                className="mb-5 text-dark"
                 dangerouslySetInnerHTML={{ __html: marked(content) }}
               ></section>
             </article>
