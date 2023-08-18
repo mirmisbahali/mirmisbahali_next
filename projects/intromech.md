@@ -2,7 +2,7 @@
 title: 'Jamstack Blog'
 date: 'September 9, 2022'
 excerpt: 'Using Jamstack and SEO best practices to rank top on Google'
-cover_image: '/assets/img/projects/1/header.png'
+cover_image: 'https://aurtmqhwnryjpytqiltv.supabase.co/storage/v1/object/public/projects/intromech/intromech.jpg'
 tags:
     - Web Design
     - Blogging
