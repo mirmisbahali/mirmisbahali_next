@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Navbar = () => {
   return (
     <nav
@@ -42,6 +44,11 @@ const Navbar = () => {
           <li className="nav-item">
             <a className="nav-link js-scroll-trigger" href="#skills">
               Skills
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link js-scroll-trigger" href="#contact">
+              Contact Me
             </a>
           </li>
         </ul>

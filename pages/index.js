@@ -8,7 +8,9 @@ import Education from "../components/Education";
 import Skills from "../components/Skills";
 import ProjectCard from "../components/ProjectCard";
 import Projects from "../components/Projects";
+
 import {sortByDate} from '../utils'
+import Contact from "../components/Contact";
 
 export default function Home(props) {
   return (
@@ -22,7 +24,7 @@ export default function Home(props) {
         <Education />
         <hr className="m-0" />
         <Skills />
-        
+        <Contact />
       </div>
     </div>
   );

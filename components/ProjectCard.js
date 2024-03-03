@@ -24,9 +24,9 @@ const ProjectCard = ({ frontmatter, slug }) => {
         <h5 className="card-title">{frontmatter.title}</h5>
         <p className="card-text">{frontmatter.excerpt}</p>
         <Link href={`/projects/${slug}`}>
-        <a  className="btn btn-outline-primary">
+        
           Read More
-        </a>
+        
         </Link>
       </div>
     </div>
